@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alvaro@xendacentral.com"]
   spec.description   = %q{Simple way to load GUID info from the Lima Metropolitana open data platform}
   spec.summary       = %q{Simple way to load GUID info from the Lima Metropolitana access}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/xenda/chillon"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
