@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Chillon::VERSION
   spec.authors       = ["Alvaro Pereyra"]
   spec.email         = ["alvaro@xendacentral.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Simple way to load GUID info from the Lima Metropolitana open data platform}
+  spec.summary       = %q{Simple way to load GUID info from the Lima Metropolitana access}
   spec.homepage      = ""
   spec.license       = "MIT"
 
