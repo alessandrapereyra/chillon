@@ -1,29 +1,23 @@
 require_relative "chillon/version"
-require 'rimac'
+require_relative "chillon/parser"
+require_relative "chillon/handler"
 
 module Chillon
  
 	class Request
 
  		def initialize(token = "NEED_A_TOKEN")
- 			@access = Rimac::API.new(token)
+ 			@handler = Handler.new(token)
  		end
 
  		def method_missing(*args)
- 			name, attrs = args
- 			if name =~ /get_(.*)/
- 				callee = $1
- 				name = transform_callee_to_guid(callee)
- 				@access.get(name)
+ 			parser = Parser.new(*args)
+ 			if parser.match?
+ 				@handler.process(parser)
  			else
  				super(*args)
  			end
- 		end
 
- 		private
-
- 		def transform_callee_to_guid(guid)  #museo_de_lima
- 			guid.upcase.gsub("_", "-")
  		end
 
  	end
