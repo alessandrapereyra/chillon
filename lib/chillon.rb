@@ -29,8 +29,3 @@ module Chillon
  	end
 
 end
-
-
-
-# api = Chillon::Request(token: "XXXX")
-# api.get_museo_de_lima 
